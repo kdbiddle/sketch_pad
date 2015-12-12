@@ -6,3 +6,10 @@
 	text-align: center;
 	margin: 10px;
 }
+
+p {
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	background-color: red;
+}
