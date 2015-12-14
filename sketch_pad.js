@@ -1,6 +1,8 @@
 function newParagraph() {
+	var container = document.getElementById("container");
+	var fadeDiv = document.getElementById("fadein");
 	var testParagraph = document.createElement("p");
-	document.body.insertBefore(testParagraph, document.getElementById("#newSketchpad"));
+	container.insertBefore(testParagraph, fadeDiv);
 };
 
 $(document).ready(function() {
