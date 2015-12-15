@@ -10,6 +10,7 @@
 p {
 	height: 200px;
 	width: 200px;
-	margin: auto;
+	margin: 2px;
 	background-color: red;
+	display: inline-block;
 }
