@@ -9,16 +9,18 @@ var gridSize;
 var tableElement;
 var row;
 
+// clears previous grid
 function clearGrid() {
-	//clear grid
 	$("#sketchPadTable").empty();
 };
 
+// prompts user for size of grid to be created
 function getGridSize() {
 	gridSize = prompt("Please enter a number between 1 and 50.");
 	parseInt(gridSize);
 };
 
+// creates new square grid of size provided by user
 function newTable() {
 	tableElement  = document.getElementById("sketchPadTable");
 	for (var i=0; i<gridSize; i++) {

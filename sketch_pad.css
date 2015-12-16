@@ -1,15 +1,13 @@
-div {
-	height: 50px;
-	width: 50px;
-	margin: 1px;
-	background-color: white;
-	border: 1px solid black;
+table {
+	height: 750px;
+	width: 750px;
+	margin: auto;
+	overflow: hidden;
 }
 
-p {
-	height: 200px;
-	width: 200px;
-	margin: 2px;
-	background-color: red;
-	display: inline-block;
+div {
+	height: 100%;
+	width: 100%;
+	margin: 1px;
+	background-color: #e6e6e6;
 }
