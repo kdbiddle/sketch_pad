@@ -1,10 +1,21 @@
-var gridSize;
+/* 
+Press button
+Clear grid
+construct new grid of size NxN
+on mouseenter, addClass to each div
+*/
 
-function newParagraph() {
-	var container = document.getElementById("container");
-	var fadeDiv = document.getElementById("fadein");
-	var testParagraph = document.createElement("p");
-	container.insertBefore(testParagraph, fadeDiv);
+var gridSize;
+var tableElement;
+
+function newTable() {
+	tableElement  = document.getElementById("sketchPadTable");
+	var firstRow = tableElement.insertRow(0);
+	firstRow.insertCell(0).appendChild(document.createElement("div"));
+	firstRow.insertCell(1).appendChild(document.createElement("div"));
+	firstRow.insertCell(2).appendChild(document.createElement("div"));
+	firstRow.insertCell(3).appendChild(document.createElement("div"));
+
 };
 
 function getGridSize() {
@@ -21,7 +32,6 @@ function createSketchPad() {
 
 $(document).ready(function() {
 	$(document).on("click", "#newSketchpad", function(){
-		getGridSize();
-		createSketchPad();
+		newTable();
 	});
 });
