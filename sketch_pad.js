@@ -7,31 +7,32 @@ on mouseenter, addClass to each div
 
 var gridSize;
 var tableElement;
+var row;
 
-function newTable() {
-	tableElement  = document.getElementById("sketchPadTable");
-	var firstRow = tableElement.insertRow(0);
-	firstRow.insertCell(0).appendChild(document.createElement("div"));
-	firstRow.insertCell(1).appendChild(document.createElement("div"));
-	firstRow.insertCell(2).appendChild(document.createElement("div"));
-	firstRow.insertCell(3).appendChild(document.createElement("div"));
-
+function clearGrid() {
+	//clear grid
+	$("#sketchPadTable").empty();
 };
 
 function getGridSize() {
-	gridSize = prompt("Please enter a number between 1 and 10.");
+	gridSize = prompt("Please enter a number between 1 and 50.");
 	parseInt(gridSize);
-	console.log(gridSize);
 };
 
-function createSketchPad() {
+function newTable() {
+	tableElement  = document.getElementById("sketchPadTable");
 	for (var i=0; i<gridSize; i++) {
-		newParagraph();
+		row = tableElement.insertRow(i);
+		for (var n=0; n<gridSize; n++) {
+			row.insertCell(n).appendChild(document.createElement("div"));	
+		};
 	};
 };
 
 $(document).ready(function() {
 	$(document).on("click", "#newSketchpad", function(){
+		clearGrid();
+		getGridSize();
 		newTable();
 	});
 });
