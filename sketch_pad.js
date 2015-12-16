@@ -31,10 +31,18 @@ function newTable() {
 	};
 };
 
+function changeDivColor() {
+	$("div").mouseenter(function() {
+		$("this").addClass("black");
+		console.log("entered div");
+	});
+};
+
 $(document).ready(function() {
 	$(document).on("click", "#newSketchpad", function(){
 		clearGrid();
 		getGridSize();
 		newTable();
+		changeDivColor();
 	});
 });
