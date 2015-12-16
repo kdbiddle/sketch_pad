@@ -31,13 +31,15 @@ function newTable() {
 	};
 };
 
+// changes color of current div on mouse enter
 function changeDivColor() {
 	$("div").mouseenter(function() {
-		$("this").addClass("black");
+		$(this).addClass("black");
 		console.log("entered div");
 	});
 };
 
+// main function
 $(document).ready(function() {
 	$(document).on("click", "#newSketchpad", function(){
 		clearGrid();
