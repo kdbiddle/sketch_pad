@@ -41,12 +41,31 @@ function changeDivColor() {
 	});
 };
 
-// main function
+// changes opacity of current div on mouse enter
+function changeDivOpacity() {
+	$("div").addClass("black");
+	$("div").mouseenter(function() {
+		$(this).animate({
+			opacity: "-=0.25"});
+	});
+};
+
+// Option 1: Sketch pad that changes div color on mouse enter
 $(document).ready(function() {
-	$(document).on("click", "#newSketchpad", function(){
+	$(document).on("click", "#sketchPadOne", function(){
 		clearGrid();
 		getGridSize();
 		newTable();
 		changeDivColor();
+	});
+});
+
+// Option 2: Sketch pad that decreases div opacity by 0.25 on mouse enter
+$(document).ready(function() {
+	$(document).on("click", "#sketchPadTwo", function(){
+		clearGrid();
+		getGridSize();
+		newTable();
+		changeDivOpacity();
 	});
 });
