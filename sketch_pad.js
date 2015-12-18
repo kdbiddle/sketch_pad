@@ -46,7 +46,7 @@ function changeDivOpacity() {
 	$("div").addClass("black");
 	$("div").mouseenter(function() {
 		$(this).animate({
-			opacity: "-=0.25"});
+			opacity: "-=0.25"}, 0);
 	});
 };
 
