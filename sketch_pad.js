@@ -8,6 +8,9 @@ on mouseenter, addClass to each div
 var gridSize;
 var tableElement;
 var row;
+var rValue;
+var gValue;
+var bValue;
 
 // clears previous grid
 function clearGrid() {
@@ -50,6 +53,20 @@ function changeDivOpacity() {
 	});
 };
 
+function randomRGBValue() {
+		rValue = Math.floor(Math.random()*255);
+		gValue = Math.floor(Math.random()*255);
+		bValue = Math.floor(Math.random()*255);
+};
+
+function changeDivColorRandom() {
+	$("div").mouseenter(function(){
+		randomRGBValue();
+		$(this).css({"background-color": rValue + "," + gValue "," + bValue});
+		console.log("Entered div, color values are:" + rValue + ", " + gValue + ", " + bValue);
+	});
+};
+
 // Option 1: Sketch pad that changes div color on mouse enter
 $(document).ready(function() {
 	$(document).on("click", "#sketchPadOne", function(){
@@ -66,6 +83,6 @@ $(document).ready(function() {
 		clearGrid();
 		getGridSize();
 		newTable();
-		changeDivOpacity();
+		changeDivColorRandom();
 	});
 });
