@@ -69,19 +69,26 @@ function changeDivColorRandom() {
 	});
 };
 
-// Option 1: Sketch pad that changes div color on mouse enter
+
 $(document).ready(function() {
+// Option 1: Sketch pad that changes div color on mouse enter
 	$(document).on("click", "#sketchPadOne", function(){
 		clearGrid();
 		getGridSize();
 		newTable();
 		changeDivColor();
 	});
-});
 
 // Option 2: Sketch pad that decreases div opacity by 0.25 on mouse enter
-$(document).ready(function() {
 	$(document).on("click", "#sketchPadTwo", function(){
+		clearGrid();
+		getGridSize();
+		newTable();
+		changeDivOpacity();
+	});
+
+//Option 3: Sketch pad that changes div to random color on mouse enter
+	$(document).on("click", "#sketchPadThree", function(){
 		clearGrid();
 		getGridSize();
 		newTable();
