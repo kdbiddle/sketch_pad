@@ -11,6 +11,7 @@ var row;
 var rValue;
 var gValue;
 var bValue;
+var randomColor;
 
 // clears previous grid
 function clearGrid() {
@@ -57,13 +58,14 @@ function randomRGBValue() {
 		rValue = Math.floor(Math.random()*255);
 		gValue = Math.floor(Math.random()*255);
 		bValue = Math.floor(Math.random()*255);
+		randomColor = "rgb("+rValue+","+gValue+","+bValue+")";
+
 };
 
 function changeDivColorRandom() {
 	$("div").mouseenter(function(){
 		randomRGBValue();
-		$(this).css({"background-color": rValue + "," + gValue "," + bValue});
-		console.log("Entered div, color values are:" + rValue + ", " + gValue + ", " + bValue);
+		$(this).css("background-color", randomColor);
 	});
 };
 
