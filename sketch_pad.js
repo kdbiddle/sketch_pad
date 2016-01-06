@@ -20,7 +20,7 @@ function clearGrid() {
 
 // prompts user for size of grid to be created up too 100x100
 function getGridSize() {
-	gridSize = prompt("Please enter a number between 1 and 100.");
+	gridSize = prompt("Please enter a number between 1 and 75.");
 	parseInt(gridSize);
 	if (gridSize > 100) {
 		gridSize = prompt("That is not a valid number. Please enter a number between 1 and 100.");
