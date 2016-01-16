@@ -5,13 +5,7 @@ construct new grid of size NxN
 on mouseenter, addClass to each div
 */
 
-var gridSize;
-var tableElement;
-var row;
-var rValue;
-var gValue;
-var bValue;
-var randomColor;
+var gridSize, tableElement, row, rValue, gValue, bValue, randomColor;
 
 // clears previous grid
 function clearGrid() {
